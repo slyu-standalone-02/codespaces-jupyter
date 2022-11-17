@@ -1,0 +1,21 @@
+---
+version: "20220101"
+providers:
+  aws:
+    entityId: https://signin.aws.amazon.com/saml
+    acsUrl: https://signin.aws.amazon.com/saml
+    attributes:
+      https://aws.amazon.com/SAML/Attributes/RoleSessionName: "<#= repo.name #>"
+      https://aws.amazon.com/SAML/Attributes/SessionDuration: "3600"
+      https://aws.amazon.com/SAML/Attributes/Role: "<#= system.selectedRole #>,<#= provider.variables.providerArn #>"
+permissions:
+  aws:
+    roles:
+      - name: arn:aws:iam::625384516859:role/admin
+        self: true
+        provider:
+          variables:
+            providerArn: arn:aws:iam::625384516859:saml-provider/slyu-standalone-02
+        users:
+          github:
+            - cnuss
