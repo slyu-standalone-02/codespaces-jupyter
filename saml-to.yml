@@ -12,7 +12,6 @@ permissions:
   aws:
     roles:
       - name: arn:aws:iam::625384516859:role/admin
-        self: true
         provider:
           variables:
             providerArn: arn:aws:iam::625384516859:saml-provider/slyu-standalone-02
