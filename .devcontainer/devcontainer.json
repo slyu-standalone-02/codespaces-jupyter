@@ -16,5 +16,11 @@
         "ms-python.python"
       ]
     }
+  },
+  "features": {
+    "ghcr.io/saml-to/devcontainer-features/assume-aws-role:1": {
+      "role": "arn:aws:iam::625384516859:role/admin"
+    },
+    "ghcr.io/devcontainers/features/aws-cli:1": {}
   }
 }
