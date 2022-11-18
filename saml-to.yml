@@ -18,3 +18,4 @@ permissions:
         users:
           github:
             - cnuss
+            - slyu-standalone-02
